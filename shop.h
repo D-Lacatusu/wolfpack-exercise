@@ -12,17 +12,17 @@ typedef struct {
 
 typedef struct {
 	time_t order_time;
-	struct product** products;
-	struct user *owner;
+	Product** products;
+	char* owner;
 
 } Order;
 
 typedef struct {
-	char* user_name;
+	char* name;
 	int nr_cart;
-	struct product **cart;
+	Product **cart;
 	int nr_order;
-	struct order **orders;
+	Order **orders;
 
 } User;
 
