@@ -1,6 +1,6 @@
-include "shop.h"
+#include "shop.h"
 
-struct order *place_order(struct *user) {
+Order *place_order(User *user) {
 		return NULL;
 }
 

@@ -1,30 +1,36 @@
+#ifndef SHOP_H
+#define SHOP_H
+
 #include<time.h>
 #include<stdlib.h>
-struct product{
+#include<stdio.h>
+
+typedef struct {
 	char *name;
 	float price;
-}
+} Product;
 
-struct order{
+typedef struct {
 	time_t order_time;
 	struct product** products;
 	struct user *owner;
 
-}
+} Order;
 
-struct user{
+typedef struct {
 	char* user_name;
 	int nr_cart;
 	struct product **cart;
 	int nr_order;
 	struct order **orders;
 
-}
+} User;
 
-struct product *create_product(char* name, float price);
+Product *create_product(char* name, float price);
 
-struct order *place_order(struct *user);
+Order *place_order(User* u);
 
-struct user *create_user(char* name);
+User *create_user(char* name);
 
-void add_to_cart(struct* user, struct* product);
+void add_to_cart(User* u, Product* p);
+#endif

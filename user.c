@@ -1,7 +1,9 @@
-include "shop.h";
+#include "shop.h"
 
-struct user *create_user(char* name) {
-	return null;
+User *create_user(char* name) {
+	return NULL;
 }
 
-void add_to_cart(struct* user, struct* product) {}
+void add_to_cart(User* u, Product* p) {
+	return ;
+}
